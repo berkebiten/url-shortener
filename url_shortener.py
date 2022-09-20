@@ -1,4 +1,4 @@
-import pyshorteners
+from pyshorteners import Shortener
 from PIL import Image, ImageFont, ImageDraw
 from colorama import Fore
 import sys
@@ -36,7 +36,7 @@ def output():
 
 
 def shorten_url(url: str) -> str:
-    type_tiny = pyshorteners.Shortener()
+    type_tiny = Shortener()
     short_url = type_tiny.tinyurl.short(url)
     return short_url
 
